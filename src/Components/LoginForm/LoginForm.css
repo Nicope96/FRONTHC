@@ -1,0 +1,138 @@
+.wrapper {
+    position: relative;
+    width: 420px;
+    height: 450px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: height .2s ease;
+}
+
+.wrapper.active{
+    height: 620px;
+    width: 500px;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.form-box.login{
+    transition: translate .18s ease;
+    translate: 0;
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    translate: -600px;
+}
+
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    translate: 400px;
+
+}
+
+.wrapper.active .form-box.form-box.register{
+    transition: translate .18s ease;
+    translate: 0;
+}
+
+form h1{
+
+    font-size: 36px;
+    text-align: center;
+}
+
+form .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+   border-color: #333;
+
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    color: #333;
+    padding: 20px 45px 20px 20px;
+}
+
+.form-box input::placeholder{
+    color: #333;
+
+}
+
+.form-box .icon{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    translate: 0 -50%;
+    font-size: 16px;
+}
+
+form .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: -15px 0 15px ;
+}
+
+.remember-forgot label input{
+    accent-color: #333;
+    margin-right: 4px;
+
+
+}
+
+
+.remember-forgot a{
+    text-decoration: none;
+    color: #333;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+    
+}
+
+form button{
+    width:100%;
+    height: 40px;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10 rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+}
+
+form .register-link{
+    font-size: 14px;
+    text-align: center;
+    margin: 20 0 15;
+}
+
+.register-link a  {
+    text-decoration: none;
+    color: #333;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
