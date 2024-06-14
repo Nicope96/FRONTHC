@@ -26,27 +26,29 @@ const LoginForm = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/api/login', { email, contrasena });
+            const response = await axios.post('http://localhost:3000/api/login', { email, contrasena });
             localStorage.setItem('token', response.data.token);
             navigateToMenu();
         } catch (error) {
             console.error('Login failed:', error);
+            
         }
     };
 
     const handleRegister = async () => {
         try {
-            await axios.post('http://localhost:5000/api/register', { email, nombre, documento, contrasena });
+            await axios.post('http://localhost:3000/api/register', { email, nombre, documento, contrasena });
             loginLink();
         } catch (error) {
             console.error('Registration failed:', error);
+            
         }
     };
 
     return (
         <div className={`wrapper${action}`}>
             <div className="form-box login">
-                <form action="">
+                <form>
                     <h1>Login</h1>
                     <div className="input-box">
                         <input type="text" id="email" placeholder="EMAIL" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -70,7 +72,7 @@ const LoginForm = () => {
             </div>
 
             <div className="form-box register">
-                <form action="">
+                <form>
                     <h1>REGISTRAR</h1>
 
                     <div className="input-box">

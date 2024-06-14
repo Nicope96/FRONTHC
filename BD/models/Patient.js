@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('./Config/DataBase');
 
-const Patient = sequelize.define('Patient', {
+const Patient = sequelize.define('pacientes', {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -32,8 +32,6 @@ const Patient = sequelize.define('Patient', {
             notEmpty: true
         }
     }
-}, {
-    timestamps: false 
 });
 
 
